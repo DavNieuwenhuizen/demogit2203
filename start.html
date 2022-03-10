@@ -4,54 +4,25 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE-edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>\
+	<title>Document</title>
 	<script src="mijnscript.js"></script>
 	<link rel="stylesheet" href="mijncss.css" type="text/css">
 	<script>
 		//window.onload = eenfunctie;
-		function tweede(){
-			console.log("hij doet het");
-			var vara = 3;
-			var varb = "Woensdag";
-			let varc = 5;
-			// strongly typed	weakly typed
-			/*console.log(varc);
-			// operators
-			let waar = true;
-			console.log(!waar);
-			let uitkomst = vara+varc;
-			console.log(uitkomst);
-			console.log(vara == varc);
-			*/
-			console.log(varb.startsWith("W"));
-			console.log(varb.startsWith("w"));
-			console.log(varb.startsWith("Woe"));
-
-			const tempArray = varb.split("s");
-			console.log(tempArray[0]);
-			console.log(tempArray[1]);
-
-			console.log(varb.toLocaleLowerCase());
-			/*
-			| pipe
-			~ tilde
-			} accolade
-			] square bracket
-			) haakje
-			< kleiner dan
-			^ totdemacht/circonflex/dakje
-			` backtick/apostroph
-			' aanhalingsteken
-			/ forward slash
-			\ back slash
-			: dubbele punt
-			; punt komma
-			*/
-		}
+		function derde(){
+			var vorige = document.getElementById("mijndiv").innerHTML;
+			var ingevoerd = document.getElementById("invoer").value;
+			var laatste = vorige.charAt(vorige.length-1);
+			if (ingevoerd.startsWith(laatste))
+				document.getElementById("mijndiv").innerHTML += "<br>Correct - "+ingevoerd;
+			else
+				document.getElementById("mijndiv").innerHTML = "Incorrect, start vanaf begin";
+			}	
 	</script>
 </head>
 <body>
-	<button onclick="tweede()">go</button>
-	<div id="mijndiv">hier is een uitkomst</div>
+	<input type="text" id="invoer">
+	<button onclick="derde()">go</button>
+	<div id="mijndiv">begin</div>
 </body>
 </html>
