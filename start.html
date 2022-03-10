@@ -1,24 +1,57 @@
-<style>
-	p:hover{
-		background-color:red;
-		color:white;
-	}
-</style>
-<script>
-    function mijnfunctie(){
-		alert();
-		console.log("daar gaan we");
-		console.log("tweede");
-	}
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>\
+	<script src="mijnscript.js"></script>
+	<link rel="stylesheet" href="mijncss.css" type="text/css">
+	<script>
+		//window.onload = eenfunctie;
+		function tweede(){
+			console.log("hij doet het");
+			var vara = 3;
+			var varb = "Woensdag";
+			let varc = 5;
+			// strongly typed	weakly typed
+			/*console.log(varc);
+			// operators
+			let waar = true;
+			console.log(!waar);
+			let uitkomst = vara+varc;
+			console.log(uitkomst);
+			console.log(vara == varc);
+			*/
+			console.log(varb.startsWith("W"));
+			console.log(varb.startsWith("w"));
+			console.log(varb.startsWith("Woe"));
 
-hoi
-<p>
-tag
-reference guide
-attribuut
-event
-IDE
-</p>
-<b>iets</b>
-<textarea cols=55 autofocus onclick="mijnfunctie()"></textarea>
+			const tempArray = varb.split("s");
+			console.log(tempArray[0]);
+			console.log(tempArray[1]);
+
+			console.log(varb.toLocaleLowerCase());
+			/*
+			| pipe
+			~ tilde
+			} accolade
+			] square bracket
+			) haakje
+			< kleiner dan
+			^ totdemacht/circonflex/dakje
+			` backtick/apostroph
+			' aanhalingsteken
+			/ forward slash
+			\ back slash
+			: dubbele punt
+			; punt komma
+			*/
+		}
+	</script>
+</head>
+<body>
+	<button onclick="tweede()">go</button>
+	<div id="mijndiv">hier is een uitkomst</div>
+</body>
+</html>
